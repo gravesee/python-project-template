@@ -1,0 +1,16 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+# -   repo: https://github.com/pre-commit/pre-commit-hooks
+-   repo: https://github.com/pre-commit/mirrors-mypy.git
+    rev: fde4bb992b03943ecb94207a52739ba07957bd06
+    hooks:
+    -   id: mypy
+-   repo: https://github.com/psf/black.git
+    rev: f6c139c5215ce04fd3e73a900f1372942d58eca0
+    hooks:
+    -   id: black
+-   repo: https://github.com/pycqa/isort
+    rev: 5.10.1
+    hooks:
+    -   id: isort

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "project-example"
+version = "0.1.0"
+description = "Create a pyproject.toml file for an existing project."
+readme = "README.md"
+license = { text = "BSD 3-Clause License" }
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["black==22.6.0", "mypy==0.961", "pre-commit==2.20.0", "isort==5.10.1"]
+
+[tools.setuptools]
+include-package-data = true
+
+[tools.setuptools.packages.find]
+include = ["src"]
+namespaces = false
+
+[tool.mypy]
+
+[[tool.mypy.overrides]]
+ignore_missing_imports = true
+
+[tool.isort]
+profile = 'black'
